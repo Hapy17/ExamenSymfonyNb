@@ -13,7 +13,20 @@
             {{ encore_entry_script_tags('back_script') }}
         {% endblock %}
     </head>
-    <body>
-        {% block body %}{% endblock %}
+    <body class='bg-dark text-light'>
+
+        <div class="row">
+        
+            <div class="col-2">
+                {% include 'back/partials/_sidebar.html.twig' %}
+            </div>
+
+            <div class="col-10">
+                {% block body %}{% endblock %}
+            </div>
+
+        </div>
+
+
     </body>
 </html>

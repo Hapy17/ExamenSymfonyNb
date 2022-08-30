@@ -1,0 +1,36 @@
+{% extends 'back/base.html.twig' %}
+
+{% block body %}
+    <h1>Index des marques</h1>
+
+    <table class="table table-dark table-hover table-striped mt-3">
+        <thead>
+            <tr>
+
+                <th>Nom</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for brand in brands %}
+            <tr>
+                <td>{{ brand.name }}</td>
+                <td>
+                    <a href="{{ path('app_admin_brand_show', {'id': brand.id}) }}">
+                        <i class="fas fa-magnifying-glass"></i>
+                    </a>
+                    <a href="{{ path('app_admin_brand_edit', {'id': brand.id}) }}">
+                        <i class="fas fa-pen"></i>
+                    </a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_admin_brand_new') }}">Ajouter une nouvelle marque</a>
+{% endblock %}
