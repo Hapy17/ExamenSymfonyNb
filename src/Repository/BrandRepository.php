@@ -39,6 +39,12 @@ class BrandRepository extends ServiceEntityRepository
         }
     }
 
+    public function getQbAll(): \Doctrine\ORM\QueryBuilder
+    {
+        return $this->createQueryBuilder('brand');
+
+    }
+
 //    /**
 //     * @return Brand[] Returns an array of Brand objects
 //     */

@@ -39,6 +39,12 @@ class ModelRepository extends ServiceEntityRepository
         }
     }
 
+    public function getQbAll(): \Doctrine\ORM\QueryBuilder
+    {
+        return $this->createQueryBuilder('model');
+        
+    }
+
 //    /**
 //     * @return Model[] Returns an array of Model objects
 //     */

@@ -6,7 +6,15 @@
     <table class="table table-dark table-hover table-striped mt-3">
         <thead>
             <tr>
-                <th>Nom</th>
+                <th>
+                    {{
+                        knp_pagination_sortable(
+                            models,
+                            'Nom',
+                            'model.name'
+                        )|raw
+                    }}
+                </th>
                 <th>Description</th>
                 <th>actions</th>
             </tr>
@@ -32,6 +40,10 @@
         {% endfor %}
         </tbody>
     </table>
+    
+    <div class="navigation d-flex justify-content-center mt-2">
+            {{ knp_pagination_render(models) }}
+    </div>
 
     <a href="{{ path('app_admin_model_new') }}">Ajouter un nouveau modèle</a>
 {% endblock %}
