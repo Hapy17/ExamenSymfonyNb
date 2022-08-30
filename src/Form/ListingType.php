@@ -29,14 +29,14 @@ class ListingType extends AbstractType
             ])
             ->add('description', TextareaType::class, [
                 'label' => 'Description',
+                'required' => false,
                 'attr' => [
                     'placeholder' => 'Description',
                     'class' => 'form-control mb-2'
                 ],
             ])
-            ->add('productionYear', DateType::class, [
+            ->add('productionYear', NumberType::class, [
                 'label' => 'Année de production',
-                'widget' => 'single_text',
                 'attr' => [
                     'placeholder' => 'Année de production',
                     'class' => 'form-control mb-2'
@@ -53,14 +53,6 @@ class ListingType extends AbstractType
                 'label' => 'Prix',
                 'attr' => [
                     'placeholder' => 'Prix',
-                    'class' => 'form-control mb-2'
-                ],
-            ])
-            ->add('createdAt', DateType::class, [
-                'label' => 'Date de création',
-                'widget' => 'single_text',
-                'attr' => [
-                    'placeholder' => 'Date de création',
                     'class' => 'form-control mb-2'
                 ],
             ])

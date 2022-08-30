@@ -29,9 +29,10 @@ class ListingController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $listing->setCreatedAt(new \DateTime());
             $listingRepository->add($listing, true);
 
-            return $this->redirectToRoute('app_listing_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('app_home', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('front/listing/new.html.twig', [

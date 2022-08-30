@@ -25,6 +25,7 @@ class ModelType extends AbstractType
             ->add('description', TextareaType::class,[
                 //Mettre un texte area pour la description
                 'label' => 'Description du modèle',
+                'required' => false,
                 'attr' => [
 
                     'placeholder' => 'Description du modèle',
