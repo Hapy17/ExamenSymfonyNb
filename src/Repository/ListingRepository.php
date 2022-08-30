@@ -41,7 +41,10 @@ class ListingRepository extends ServiceEntityRepository
 
     public function getQbAll(): \Doctrine\ORM\QueryBuilder
     {
-        return $this->createQueryBuilder('listing');
+        // du plus récent au plus ancien 
+        return $this->createQueryBuilder('listing')
+            ->orderBy('listing.createdAt', 'DESC');
+
     }
 
 //    /**
