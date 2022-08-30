@@ -1,0 +1,9 @@
+{% extends 'back/base.html.twig' %}
+
+{% block body %}
+    <h1>Créer un nouveau modèle</h1>
+
+    {{ include('back/model/_form.html.twig') }}
+
+    <a href="{{ path('app_admin_model_index') }}">Retour à la liste</a>
+{% endblock %}
