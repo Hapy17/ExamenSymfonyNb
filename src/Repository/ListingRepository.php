@@ -39,6 +39,11 @@ class ListingRepository extends ServiceEntityRepository
         }
     }
 
+    public function getQbAll(): \Doctrine\ORM\QueryBuilder
+    {
+        return $this->createQueryBuilder('listing');
+    }
+
 //    /**
 //     * @return Listing[] Returns an array of Listing objects
 //     */

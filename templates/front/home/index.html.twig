@@ -9,6 +9,9 @@
                 {% include 'front/partials/_card.html.twig' with {'card':card} %}
             {% endfor %}
         </div>
+        <div class="navigation d-flex justify-content-center mt-2">
+            {{ knp_pagination_render(listings) }}
+        </div>
     </div>
 
 {% endblock %}
