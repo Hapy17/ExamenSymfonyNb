@@ -1,0 +1,25 @@
+i {
+    color: #dfdfdf;
+    &:hover {
+     color: $primary-color;
+    }
+  }
+
+  .menu-active{
+    font-size: 1.1rem;
+    color: $primary-color;
+}
+
+h1{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+a{
+    text-decoration: none;
+    color: lightsalmon;
+
+    &:hover{
+        color: darken($primary-color, 10%);
+    }
+}

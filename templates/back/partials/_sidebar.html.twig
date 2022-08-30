@@ -1,13 +1,13 @@
 <div class="ps-4 pt-4">
     <h4>Marques</h4>
     <ul class="list-unstyled ps-4">
-        <li><a href="{{path('app_admin_brand_index')}}">Toutes les marques</a></li>
-        <li><a href="{{path('app_admin_brand_new')}}">Ajouter une marque</a></li>
+        <li><a class="{% if app.request.pathinfo == path('app_admin_brand_index') %}menu-active{% endif %}" href="{{path('app_admin_brand_index')}}">Toutes les marques</a></li>
+        <li><a class="{% if app.request.pathinfo == path('app_admin_brand_new') %}menu-active{% endif %}" href="{{path('app_admin_brand_new')}}">Ajouter une marque</a></li>
     </ul>
     <h4>Modèles</h4>
     <ul class="list-unstyled ps-4">
-        <li><a href="{{path('app_admin_model_index')}}">Tous les modèles</a></li>
-        <li><a href="{{path('app_admin_model_new')}}">Ajouter un modèle</a></li>
+        <li><a class="{% if app.request.pathinfo == path('app_admin_model_index') %}menu-active{% endif %}" href="{{path('app_admin_model_index')}}">Tous les modèles</a></li>
+        <li><a class="{% if app.request.pathinfo == path('app_admin_model_new') %}menu-active{% endif %}" href="{{path('app_admin_model_new')}}">Ajouter un modèle</a></li>
     </ul>
 
     <a href="{{path('app_home')}}">Retour au site</a>

@@ -1,1 +1,8 @@
 @import '../../shared/style/index';
+
+@import'_variables';
+
+@import'_general';
+
+@import 'components/sorting';
+@import 'components/pagination';
