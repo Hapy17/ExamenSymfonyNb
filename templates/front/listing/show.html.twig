@@ -1,0 +1,36 @@
+{% extends 'front/base.html.twig' %}
+{% block title %} Annonce {{listing.title}} {% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-7 mx-auto">
+                <h1>{{listing.title}}</h1>
+                {% if listing.description %}
+                    <p>{{listing.description}}</p> 
+                {% endif %}
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>Année de mise en circulation</th>
+                            <td>{{ listing.productionYear }}</td>
+                        </tr>
+                        <tr>
+                            <th>Kilométrage</th>
+                            <td>{{ listing.mileage }} km</td>
+                        </tr>
+                        <tr>
+                            <th>Prix</th>
+                            <td>{{ listing.price }} €</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class='text-muted fs-6'>Annonce mise ligne le {{ listing.createdAt ? listing.createdAt|date('Y-m-d H:i:s') : '' }}</p>
+            </div>
+        </div>
+        <a href="{{ path('app_home') }}">Retour à la liste</a>
+    </div>
+
+    
+
+{% endblock %}

@@ -10,6 +10,9 @@
           <a class="nav-link {% if app.request.pathinfo == path('app_home') %}active{% endif %}" aria-current="page" href="{{path('app_home')}}">Accueil</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="{{path('app_listing_new')}}">Ajouter une annonce</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="{{path('app_admin_brand_index')}}">Administration</a>
         </li>
       </ul>

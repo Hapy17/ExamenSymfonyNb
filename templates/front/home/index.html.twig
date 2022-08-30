@@ -2,5 +2,13 @@
 {% block title %} Accueil {% endblock %}
 
 {% block body %}
-<h1>Squelette d'un projet Symfony </h1>
+
+    <div class="container mt-4">
+        <div class="row g-2 row-cols-2 justify-content-center">
+            {% for card in listings %}
+                {% include 'front/partials/_card.html.twig' with {'card':card} %}
+            {% endfor %}
+        </div>
+    </div>
+
 {% endblock %}

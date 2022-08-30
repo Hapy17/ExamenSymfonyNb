@@ -1,0 +1,7 @@
+<div class="card col-3 mx-1">
+  <div class="card-body">
+    <h5 class="card-title">{{card.title}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{card.mileage}}km - {{card.productionYear}}</h6>
+    <a href="{{ path('app_listing_show', {'id': card.id}) }}" class="card-link">En savoir +</a>
+  </div>
+</div>

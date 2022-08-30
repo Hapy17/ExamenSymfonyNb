@@ -1,0 +1,14 @@
+{% extends 'front/base.html.twig' %}
+{% block title %} Ajout d'une nouvelle annonce {% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row ">
+            <div class="col-6 mx-auto">
+                <h1>Ajouter une nouvelle annonce</h1>
+                {{ include('front/listing/_form.html.twig') }}
+                <a href="{{ path('app_home') }}">Retour à la liste</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
