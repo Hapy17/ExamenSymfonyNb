@@ -40,7 +40,7 @@ Une fois le dossier squeletteSymfony est installer sur votre machine, vous devez
 Une fois ces deux commandes executées, vous pouvez commencer à utiliser le squelette de projet Symfony.  
 Lancez les commandes suivantes :  
 ```
-symofony serve
+symfony serve
 ```
 et
 ```
